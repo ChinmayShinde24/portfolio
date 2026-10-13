@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-logo: 'Comfortaa', sans-serif;
+
+ --color-background:#2E2E2E;;
+  --color-surface: #3A3A3A;
+  --color-accent: #FFFFFF;      /* white now does the job red did */
+  --color-text-primary: #FFFFFF;
+  --color-text-muted:#B0B0B0;  /* soft gray for secondary text */
+}
+
+
+html,
+body{
+ height: 100%;
+ width: 100%;
+  cursor: none;
+ 
+}
+body{
+   background-color: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+
+
+
