@@ -9,13 +9,13 @@ import halo768Avif from '../assets/images/halo/halo-768.avif'
 import halo768Webp from '../assets/images/halo/halo-768.webp'
 import halo1024Avif from '../assets/images/halo/halo-1024.avif'
 import halo1024Webp from '../assets/images/halo/halo-1024.webp'
+import AnimatedHeading from './AnimatedHeading'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const AboutBanner = () => {
   const sectionRef = useRef(null)
   const badgeRef = useRef(null)
-  const lineRef = useRef(null)
   const ctaRef = useRef(null)
   const imageRef = useRef(null)
   const cardRef = useRef(null)
@@ -27,13 +27,11 @@ const AboutBanner = () => {
         start: 'top 80%',
         once: true,
         toggleActions: 'play none none none',
-      
       },
     })
 
     tl.from(badgeRef.current, { y: 15, opacity: 0, duration: 0.5, ease: 'power2.out' })
-      .from(lineRef.current, { y: 30, opacity: 0, duration: 1, ease: 'power3.out' }, '-=0.2')
-      .from(ctaRef.current, { y: 20, opacity: 0, duration: 0.5 }, '-=0.3')
+      .from(ctaRef.current, { y: 20, opacity: 0, duration: 0.5 }, '-=0.2')
       .from(imageRef.current, { opacity: 0, scale: 0.96, duration: 0.8, ease: 'power2.out' }, '-=0.6')
       .from(cardRef.current, { y: 20, opacity: 0, duration: 0.5 }, '-=0.3')
   }, { scope: sectionRef })
@@ -60,12 +58,11 @@ const AboutBanner = () => {
             </p>
           </div>
 
-          <p
-            ref={lineRef}
+          <AnimatedHeading
+            as="p"
             className="max-w-xl font-logo text-2xl font-semibold leading-snug text-white sm:text-3xl md:text-4xl"
-          >
-            Self-taught. Client-tested. Still learning, on purpose.
-          </p>
+            lines={['Self-taught. Client-tested.', 'Still learning, on purpose.']}
+          />
 
           <a
             ref={ctaRef}

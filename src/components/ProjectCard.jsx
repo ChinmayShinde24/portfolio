@@ -10,7 +10,14 @@ const ProjectCard = ({ project, index, total, cardRef }) => {
       ref={cardRef}
       href={project.link}
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
+      draggable={false}
+      onClick={(e) => {
+        // Ensure new-tab open even if a parent handler interferes
+        if (!project.link) return
+        e.preventDefault()
+        window.open(project.link, '_blank', 'noopener,noreferrer')
+      }}
       className="group relative w-[90%] shrink-0 overflow-hidden rounded-3xl bg-zinc-900 aspect-[2.1/1] sm:w-[60%] md:w-[45%] lg:w-[45%]"
     >
       {/* Blurred background */}

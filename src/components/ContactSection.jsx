@@ -3,6 +3,7 @@ import React, { useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
+import AnimatedHeading from './AnimatedHeading'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -11,7 +12,6 @@ const PHONE = '+91 8369025524'
 
 const ContactSection = () => {
   const sectionRef = useRef(null)
-  const headingRef = useRef(null)
   const subRef = useRef(null)
   const ctaRef = useRef(null)
   const infoRef = useRef(null)
@@ -23,12 +23,10 @@ const ContactSection = () => {
         start: 'top 75%',
         once: true,
         toggleActions: 'play none none none',
-       
       },
     })
 
-    tl.from(headingRef.current, { y: 30, opacity: 0, duration: 0.8, ease: 'power3.out' })
-      .from(subRef.current, { y: 20, opacity: 0, duration: 0.6 }, '-=0.4')
+    tl.from(subRef.current, { y: 20, opacity: 0, duration: 0.6 })
       .from(ctaRef.current, { y: 20, opacity: 0, duration: 0.5 }, '-=0.3')
       .from(infoRef.current.children, {
         y: 15,
@@ -44,12 +42,11 @@ const ContactSection = () => {
       id="contact"
       className="relative w-full bg-white text-black px-5 py-20 text-center sm:px-6 sm:py-32"
     >
-      <h2
-        ref={headingRef}
+      <AnimatedHeading
+        as="h2"
         className="mx-auto max-w-3xl font-heading text-2xl font-semibold leading-snug text-black xs:text-3xl sm:text-4xl md:text-5xl"
-      >
-        Ready to start building?
-      </h2>
+        text="Ready to start building?"
+      />
 
       <p
         ref={subRef}

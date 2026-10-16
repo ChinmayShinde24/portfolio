@@ -1,5 +1,6 @@
 // Practice.jsx
 import { motion } from "framer-motion";
+import AnimatedHeading from "./AnimatedHeading";
 import khanakhazanaImg from "../assets/Originals/Practice/khanakhazana.png";
 import planitImg from "../assets/Originals/Practice/planit.png";
 import parallaxImg from "../assets/Originals/Practice/parallax.png";
@@ -141,9 +142,11 @@ const Practice = () => {
         <p className="mb-3 text-xs font-semibold tracking-[0.2em] text-gray-700 md:text-sm">
           PRACTICE
         </p>
-        <h2 className="mb-4 text-3xl font-semibold text-gray-900 md:text-5xl">
-          Projects I Built to Learn by Doing
-        </h2>
+        <AnimatedHeading
+          as="h2"
+          className="mb-4 text-3xl font-semibold text-gray-900 md:text-5xl"
+          lines={["Projects I Built to Learn by", "Doing"]}
+        />
         <p className="text-sm text-gray-700 md:text-base">
           Small, self-directed builds, each one a concept I turned into
           something real before it ever became client work.

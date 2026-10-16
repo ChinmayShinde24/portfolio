@@ -1,4 +1,5 @@
 import React from 'react'
+import AnimatedHeading from './AnimatedHeading'
 import {
   SiJavascript,
   SiTypescript,
@@ -149,9 +150,11 @@ const ModernProduction = () => {
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gray-400">
           Built With
         </p>
-        <h2 className="mt-4 font-body text-4xl font-semibold text-white sm:text-5xl">
-          A Modern, Production-Toolchain Stack
-        </h2>
+        <AnimatedHeading
+          as="h2"
+          className="mt-4 font-body text-4xl font-semibold text-white sm:text-5xl"
+          text="A Modern, Production-Toolchain Stack"
+        />
         <p className="mx-auto mt-4 max-w-xl font-logo text-sm text-gray-400 sm:text-base">
           Languages, frontend, backend, GenAI, and cloud — the full stack I use to ship real products.
         </p>
