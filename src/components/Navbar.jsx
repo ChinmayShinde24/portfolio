@@ -42,13 +42,14 @@ const Navbar = ({ navRef }) => {
         </a>
 
           </button>
-          <button 
-          onClick={()=>{
-          sidebarRef.current?.open()
-          }}
-          
-          
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20  cursor-pointer active:scale-95">
+          <button
+            type="button"
+            onClick={() => {
+              sidebarRef.current?.open()
+            }}
+            aria-label="Open menu"
+            className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 cursor-pointer active:scale-95 md:hidden"
+          >
             <i className="ri-menu-line"></i>
           </button>
         </div>

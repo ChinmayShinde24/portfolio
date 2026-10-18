@@ -1,3 +1,12 @@
+// Switch 2 Travel
+import switch2travel480Webp from "../images/Work/switch2travel/switch2travel-480.webp";
+import switch2travel768Webp from "../images/Work/switch2travel/switch2travel-768.webp";
+import switch2travel1440Webp from "../images/Work/switch2travel/switch2travel-1440.webp";
+
+import switch2travel480Avif from "../images/Work/switch2travel/switch2travel-480.avif";
+import switch2travel768Avif from "../images/Work/switch2travel/switch2travel-768.avif";
+import switch2travel1440Avif from "../images/Work/switch2travel/switch2travel-1440.avif";
+
 // Wadii
 import wadii480Webp from "../images/Work/wadii/wadii-480.webp";
 import wadii768Webp from "../images/Work/wadii/wadii-768.webp";
@@ -37,6 +46,32 @@ import chitchat1440Avif from "../images/Work/chitchat/chitchat-1440.avif";
 const projects = [
   {
     id: 1,
+    title: "Switch 2 Travel",
+    category: "Travel Website",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "SEO", "Vercel"],
+    image: {
+      webp: {
+        480: switch2travel480Webp,
+        768: switch2travel768Webp,
+        1440: switch2travel1440Webp,
+      },
+      avif: {
+        480: switch2travel480Avif,
+        768: switch2travel768Avif,
+        1440: switch2travel1440Avif,
+      },
+    },
+    description:
+      "Travel agency website for booking India holiday packages with clear pricing and region-first browsing.",
+    highlights: [
+      "Built a travel agency website in Next.js so packages, destinations, and trip plans load quickly for travellers.",
+      "Improved performance with optimized images, lean page weight, and faster navigation across region and package pages.",
+      "Made the site SEO-friendly with clean structure, metadata, and content that helps destinations and packages get discovered.",
+    ],
+    link: "https://switch2travel.in/",
+  },
+  {
+    id: 2,
     title: "Wadii",
     category: "SaaS Platform",
     tech: [
@@ -72,7 +107,7 @@ const projects = [
     link: "https://app.wadii.in/login",
   },
   {
-    id: 2,
+    id: 3,
     title: "Resume Builder",
     category: "AI Product",
     tech: ["Next.js", "TypeScript", "MongoDB", "Mongoose", "Gemini AI"],
@@ -98,7 +133,7 @@ const projects = [
     link: "https://resume-builder-acxx.onrender.com/auth/login",
   },
   {
-    id: 3,
+    id: 4,
     title: "ContextAI",
     category: "AI / RAG",
     tech: [
@@ -134,7 +169,7 @@ const projects = [
     link: "https://contextai-frontend.onrender.com/",
   },
   {
-    id: 4,
+    id: 5,
     title: "ChitChat",
     category: "Real-time Chat",
     tech: ["React", "Node.js", "MongoDB", "Express", "Socket.IO"],
